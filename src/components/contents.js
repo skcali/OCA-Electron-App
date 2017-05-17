@@ -27,11 +27,11 @@ class Contents extends React.Component {
         }
 
         console.log(lessonCheck);
-        var table = lessonCheck.map(item => <li key={item._id}><Link to={`/contents/${item._id}`}>{item.title}</Link></li>);
+        var table = lessonCheck.map(item => <li key={item._id}><Link to={`/contents/${item._id}`} style={{ textDecoration: 'none', color: '#00BCD4', fontSize: 16 }}>{item.title}</Link></li>);
 
-        return (<div>
-            <h1>Table of Contents</h1>
-            {table}
+        return (<div style={{ width: '90%', fontFamily: 'helvetica', color: '#A9A9A9', fontSize: '1em', margin: 'auto', }}>
+            <h3>Projects:</h3>
+            <ol>{table}</ol>
         </div>);
     };
 };
