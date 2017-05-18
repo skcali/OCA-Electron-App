@@ -30,6 +30,20 @@ class Lesson extends React.Component {
                 .catch(err => Promise.reject(err));
         }
 
+        // var handleClick = function (id, lesson) {
+        //     this.setState({ loading: true });
+
+        //     setTimeout(() => {
+        //         lesson.completed = true;
+        //         axios.put(`http://oca-sebulba.herokuapp.com/api/lessons/${id}`, lesson)
+        //             .then(response => {
+        //                 this.setState({ loading: false });
+        //              })
+        //             .catch(err => Promise.reject(err));
+        //     }, 1000);
+            
+        // }
+
         return (
             <div style={{ width: '90%', fontFamily: 'helvetica', color: '#A9A9A9', fontSize: '1em', margin: 'auto', }}>
                 <ReactMarkdown source={lesson.markdown} />
